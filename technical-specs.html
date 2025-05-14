@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Specs - Porsche 911 GT3 RS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff;
+      color: #000;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    h2 {
+      text-align: left;
+      padding-left: 10%;
+    }
+
+    .specs-image img {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .accordion {
+      margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .accordion-item {
+      padding: 15px 20px;
+      font-weight: bold;
+      border-top: 1px solid #ccc;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .accordion-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px 20px;
+      background-color: #efefef;
+      font-size: 16px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .accordion-item.active + .accordion-content {
+      display: block;
+    }
+
+    .btn-specs {
+      display: inline-block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border: 2px solid #000;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-specs:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Technical Specs</h2>
+
+  <!-- Gambar Dimensi Mobil -->
+  <div class="specs-image">
+    <img src="image/Technical Specs.png" alt="dimensi-mobil">
+  </div>
+
+  <!-- Accordion -->
+  <div class="accordion">
+    <div class="accordion-item" onclick="toggleAccordion(this)">
+      Motor <span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>Engine type: 4.0L flat-six naturally aspirated</p>
+      <p>Transmission: 7-speed PDK</p>
+      <p>Drive type: RWD</p>
+    </div>
+
+    <div class="accordion-item" onclick="toggleAccordion(this)">
+      Performance <span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>0-60 mph: 3.0 seconds</p>
+      <p>Horsepower: 518 hp</p>
+      <p>Top Speed: 184 mph</p>
+    </div>
+
+    <div class="accordion-item" onclick="toggleAccordion(this)">
+      Body <span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>Length: 180.0 in</p>
+      <p>Height: 52.0 in</p>
+      <p>Wheelbase: 96.7 in</p>
+      <p>Width: 74.8 in</p>
+    </div>
+
+    <div class="accordion-item" onclick="toggleAccordion(this)">
+      Terrain Features <span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>Track-tuned suspension</p>
+      <p>High-performance brakes</p>
+      <p>Rear wing with aerodynamic adjustment</p>
+    </div>
+  </div>
+
+  <!-- Tombol Kembali ke Home -->
+  <a href="index.html" class="btn-specs" id="back-link">Back to Home</a>
+
+  <!-- Script Accordion -->
+  <script>
+    function toggleAccordion(element) {
+      element.classList.toggle("active");
+      const icon = element.querySelector("span");
+      icon.textContent = icon.textContent === "+" ? "−" : "+";
+    }
+
+    // Transisi fade-out saat kembali
+    const backLink = document.getElementById("back-link");
+    backLink.addEventListener("click", function(event) {
+      event.preventDefault();
+      document.body.style.opacity = 0;
+      setTimeout(() => {
+        window.location.href = backLink.href;
+      }, 500);
+    });
+  </script>
+
+</body>
+</html>

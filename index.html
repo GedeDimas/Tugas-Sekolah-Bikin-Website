@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Porsche 911 GT3 RS</title>
+
+  <!-- Swiper.js CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff;
+      color: #000;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    .logo-container img {
+      width: 100px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .gambar-mobil-samping img {
+      width: 80%;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 20px auto;
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+
+    .gambar-mobil-depan img {
+      width: 60%;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      font-size: 24px;
+    }
+
+    .stat span {
+      font-size: 16px;
+      display: block;
+      margin-top: 5px;
+      color: #555;
+    }
+
+    .btn-specs {
+      display: inline-block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border: 2px solid #000;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-specs:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (max-width: 600px) {
+      .stats {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .content-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text-box, .side-image-container, .video-box {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+
+      .main-image {
+        width: 100%;
+      }
+    }
+
+    .main-image-container {
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .content-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      margin: 40px auto;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+
+    .text-box {
+      flex: 1 1 300px;
+      text-align: left;
+      font-size: 18px;
+    }
+
+    .text-box strong {
+      display: block;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .side-image-container {
+      flex: 1 1 200px;
+    }
+
+    .side-image {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .video-box {
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .video-box video {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 12px;
+    }
+
+    /* === Swiper Highlight Section === */
+    .highlight-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .highlight-section h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .swiper {
+      padding-bottom: 40px;
+    }
+
+    .swiper-slide {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+
+    .swiper-slide img,
+    .swiper-slide video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .highlight-caption {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      color: #fff;
+      z-index: 2;
+      text-align: left;
+    }
+
+    .highlight-caption h4 {
+      font-size: 20px;
+      margin: 0 0 5px;
+    }
+
+    .highlight-caption p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .swiper-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 60%);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="image/Logo Porsche.jpg" alt="Porsche Logo">
+  </div>
+
+  <!-- Mobil Samping -->
+  <div class="gambar-mobil-samping">
+    <img src="image/Porsche 911 GT3 RS (1).png" alt="Side view of Porsche 911 GT3 RS">
+  </div>
+
+  <!-- Judul Mobil -->
+  <h1>Porsche 911 GT3 RS</h1>
+
+  <!-- Mobil Depan -->
+  <div class="gambar-mobil-depan">
+    <img src="image/Tampang Depan Mobil.png" alt="Front view of Porsche 911 GT3 RS">
+  </div>
+
+  <!-- Statistik -->
+  <div class="stats">
+    <div class="stat">3<span>s<br>0 - 60 mph</span></div>
+    <div class="stat">518<span>hp<br>Max. engine power</span></div>
+    <div class="stat">184<span>mph<br>Top track speed</span></div>
+  </div>
+
+  <!-- Tombol ke Halaman Specs -->
+  <a href="technical-specs.html" class="btn-specs" id="fade-link">Technical Specs</a>
+
+  <!-- Gambar Utama -->
+  <div class="main-image-container">
+    <img src="image/Tampang samping mobil (track).webp" alt="Track Side View" class="main-image">
+  </div>
+
+  <!-- Konten Utama -->
+  <div class="content-section">
+    <div class="text-box">
+      <strong>Sportmade.</strong>
+      <p>Every athlete knows the absolute willingness to question everything is crucial to achieving top performance.
+        With this attitude, Porsche continues to push back the boundaries of what is possible.</p>
+    </div>
+
+    <div class="side-image-container">
+      <img src="image/Tampak Serong Mobil.avif" alt="Tampang Serong Mobil" class="side-image">
+    </div>
+
+    <div class="video-box">
+      <video id="auto-video">
+        <source src="video/The_new_Porsche_911_GT3_RS_-_Porsche_Center_Curacao(1080p).mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- Highlight Section - Swiper Slider -->
+  <div class="highlight-section">
+    <h2>911 GT3 RS highlights.</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="image/Front View 911 GT3 RS.jpg" alt="Front View">
+          <div class="highlight-caption">
+            <h4>Vehicle Concept</h4>
+            <p>The road-approved high-performance 911 GT3 RS sports car shows off its full potential on the track.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <video autoplay muted loop playsinline>
+            <source src="video/Highligh DRS Porsche.mp4" type="video/mp4">
+          </video>
+          <div class="highlight-caption">
+            <h4>Aerodynamics</h4>
+            <p>Porsche Active Aerodynamics (PAA) adjusts the downforce automatically. DRS reduces drag on straights.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="image/Interior.avif" alt="Interior">
+          <div class="highlight-caption">
+            <h4>Lightweight</h4>
+            <p>Use of CFRP allows a total weight of just 3,268 lbs including doors, roof, and hood.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="image/Chassis.jpg" alt="Chassis">
+          <div class="highlight-caption">
+            <h4>Chassis</h4>
+            <p>Optimized chassis and wider track improve lateral dynamics and anti-dive on braking.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="image/Engine.jpg" alt="Engine">
+          <div class="highlight-caption">
+            <h4>Engine</h4>
+            <p>4.0L flat-six with individual throttle valves and lightweight stainless exhaust system.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Navigasi -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Script Fade dan Slider -->
+  <script>
+    const link = document.getElementById("fade-link");
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+      document.body.style.opacity = 0;
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 500);
+    });
+
+    const video = document.getElementById('auto-video');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.6 });
+    observer.observe(video);
+
+    // Inisialisasi Swiper
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
